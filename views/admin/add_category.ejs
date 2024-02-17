@@ -1,0 +1,44 @@
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- end page-title -->
+
+            <div class="row " style="justify-content: center;">
+                <div class="col-lg-8 mt-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+
+                            <h4 class="mt-0 header-title">Kategoriya qo'shish</h4>
+                            <p class="sub-title">Parsley is a javascript form validation
+                                library. It helps you provide your users with feedback on their form
+                                submission before sending it to your server.</p>
+                            <form action="/create/category" method="post" >
+                                <div class="form-group">
+                                    <label>Kategoriya nomi</label>
+                                    <textarea type="text"  name="name" class="form-control" 
+                                        data-parsley-minlength="5" required placeholder="Jahon" ></textarea>
+                                </div>
+                                <div class="form-group"  style="display: none;">
+                                    <label>Institut nomi</label>
+                                    <textarea type="text"  name="institut" class="form-control" 
+                                    data-parsley-minlength="5" required placeholder="Jahon" ><%=otmadmin.institut  %></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                                    Cancel
+                                </button>
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div> <!-- end col -->
+
+    </div> <!-- end row -->
+</div>

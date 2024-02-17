@@ -1,0 +1,136 @@
+
+  .file-upload {
+    background-color: #30419b;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .img-tb{
+    width: 250px;
+    height: 200px;
+  }
+
+  .file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #30419b;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #30419b;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .file-upload-btn:hover {
+    background: #30419b;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+  }
+
+  .file-upload-content {
+    border: solid 2px #30419b;
+    display: none;
+    text-align: center;
+  }
+
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .image-upload-wrap {
+    border: 4px solid #30419b;
+    position: relative;
+  }
+
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: #30419b;
+  }
+
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+
+  .drag-text {
+    text-align: center;
+  }
+
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #000;
+    padding: 60px 0;
+  }
+
+  .file-upload-image {
+    max-height: 300px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .remove-image {
+    width: 400px;
+    margin: 0;
+    color: #fff;
+    background: #222;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .remove-image:hover {
+    background: #fff;
+    color: #222;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .remove-image:active {
+    border: 0;
+    transition: all 0.2s ease;
+  }
+
+.params
+{
+  display:flex;
+  justify-content: space-around;
+}
+.param
+{
+  text-align: center;
+  width: 60px;
+}
+.matn
+{
+  width: 300px;
+  text-align: center;
+}
+tr .td
+{
+  font-size: 12px;
+  text-align: center;
+}

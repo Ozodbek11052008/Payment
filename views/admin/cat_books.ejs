@@ -1,0 +1,75 @@
+<% var user%>
+
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end page-title -->
+
+
+
+                <div class="row">
+                    <%catdb.map(item=>{%>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                                    </div>
+                                    <div>
+                                        <% let category=item.category%>
+                                            <% let result=category[0].name%>
+                                               
+                                                    <h5 class="font-16">
+                                                        <%=item.count%> <%= result %>
+                                                    </h5>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <%})%>
+
+
+                    <select name="" id="">
+                  <% catdb.map(item => { %>
+                        <option value=""><%= item.category[0].name %></option>
+                        <%})%>
+                    </select>
+                    <select name="" id="">
+                      <%= catdb.category %>
+                          </select>
+
+                </div>
+                <!-- end row -->
+
+
+            </div>
+            <!-- container-fluid -->
+
+        </div>
+        <!-- content -->
+
+        <footer class="footer">
+            © 2019 - 2020 Stexo <span class="d-none d-sm-inline-block"> - Crafted with <i
+                    class="mdi mdi-heart text-danger"></i> by Themesdesign</span>.
+        </footer>
+
+    </div>

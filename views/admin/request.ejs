@@ -1,0 +1,90 @@
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- end page-title -->
+            <div class="row">
+                <div class="mt-4" style="
+              display: flex;
+              width: 100%;
+              flex-direction: row;
+              justify-content:space-between;
+              align-items: center;
+            ">
+                    <h4 class="ml-5" style="font-weight: 600">
+                        Sorovlar royhati ro'yhati
+                    </h4>
+                  
+                </div>
+                <div class="col-12 table-responsive">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <p class="sub-title ml-3">
+                                Malumotlar malumotlar bazasidan to'gridan to'g'ri
+                                kelmoqda.Malumotlar oxirgi qo'shilgan tartibi bo'yicha chiqmoqda
+                            </p>
+
+                            <table id="datatable-buttons"
+                                class="table table-striped table-bordered dt-responsive nowrap" style="
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                  ">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Book</th>
+                                        <th>Status</th>
+
+                                   
+                                        <th>Params</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <%request.map(item=>{%>
+                                    <tr>
+                                        <td><%=item.user.name%></td>
+                                        <td><%=item.book.title%></td>
+                                        <td><span class="status<%=item.statusreq%>"> <%=item.statusreq%></span></td>
+
+                                        <td class="params">
+                                            <a href="/allow/<%=item._id   %>" style="color:#02c58d ;"
+                                                class="btn btn-outline-success waves-effect waves-light">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="/taken/book/<%=item._id   %>" style="color:#02c58d ;"
+                                                class="btn btn-outline-success waves-effect waves-light">
+                                                <i class="fa-solid fa-check-double"></i>
+                                            </a>
+                                            <form action="/request/delete/<%=item._id%>?_method=DELETE"
+                                                style="display:inline-block;" method="post">
+                                                <button type="submit"
+                                                    class="btn btn-outline-danger waves-effect waves-light">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <%})%>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+        © 2019 - 2020 Stexo
+        <span class="d-none d-sm-inline-block">
+            - Crafted with <i class="mdi mdi-heart text-danger"></i> by
+            Themesdesign</span>.
+    </footer>
+</div>

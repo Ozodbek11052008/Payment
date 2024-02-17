@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" action="/donate/<%=data._id  %>">
+        <h1>text</h1>
+        <input type="text" name="text">
+        <script src="https://my.click.uz/pay/checkout.js"
+                  class="uzcard_payment_button"
+                  data-service-id="31807"
+                  data-merchant-id="24122"
+                  data-transaction-param="1"
+                  data-merchant-user-id="38597"
+                  data-amount="1111"
+                  data-card-type="humo"
+                  data-label="Оплатить"
+        ></script>
+</form>
+</body>
+
+</html>

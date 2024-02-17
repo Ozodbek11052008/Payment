@@ -1,0 +1,103 @@
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- end page-title -->
+            <div class="row">
+                <div class="mt-4" style="
+              display: flex;
+              width: 100%;
+              flex-direction: row;
+              justify-content:space-between;
+              align-items: center;
+            ">
+                    <h4 class="ml-5" style="font-weight: 600">
+                        Studentlar ro'yhati
+                    </h4>
+                  
+                </div>
+                <div class="col-12 table-responsive">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <p class="sub-title ml-3">
+                                Malumotlar malumotlar bazasidan to'gridan to'g'ri
+                                kelmoqda.Malumotlar oxirgi qo'shilgan tartibi bo'yicha chiqmoqda
+                            </p>
+
+                            <table id="datatable-buttons"
+                                class="table table-striped table-bordered dt-responsive nowrap" style="
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                  ">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Surname</th>
+                                        <th>guruh</th>
+                                        <th>Login</th>
+                                        <th>parol</th>
+
+                                        <th>Photo</th>
+
+
+                                        <th>Params</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <%users.map(item=>{%>
+                                        <tr>
+                                            <td>
+                                                <%=item.name%>
+                                            </td>
+                                            <td>
+                                                <%=item.surname%>
+                                            </td>
+                                            <td>
+                                                <%=item.guruh%>
+                                            </td>
+                                            <td>
+                                                <%=item.login%>
+                                            </td>
+                                            <td>
+                                                <%=item.parol%>
+                                            </td>
+                                            <td><img class="img-tb" src="/Uploads/user/<%=item.photo  %>" alt=""></td>
+
+                                            <td class="params">
+                                                <a href="/user/update/<%=item._id  %>" style="color:#02c58d ;"
+                                                    class="btn btn-outline-success waves-effect waves-light">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                <form action="/user/delete/<%= item._id%>?_method=DELETE"
+                                                    style="display:inline-block;" method="post">
+                                                    <button type="submit"
+                                                        class="btn btn-outline-danger waves-effect waves-light">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <%})%>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+        © 2019 - 2020 Stexo
+        <span class="d-none d-sm-inline-block">
+            - Crafted with <i class="mdi mdi-heart text-danger"></i> by
+            Themesdesign</span>.
+    </footer>
+</div>

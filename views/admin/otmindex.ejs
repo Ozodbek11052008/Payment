@@ -1,0 +1,157 @@
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="page-title-box">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <h4 class="page-title">Dashboard</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-right">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end page-title -->
+
+            <div class="row">
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-heading p-4">
+                            <div class="mini-stat-icon float-right">
+                                <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-16">Barcha Guruhlar</h5>
+                            </div>
+                            <h3 class="mt-4">
+                                <%=legthguruh %>
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-heading p-4">
+                            <div class="mini-stat-icon float-right">
+                                <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-16">Barcha Talabalar</h5>
+                            </div>
+                            <h3 class="mt-4">
+                                <%=studentlength %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="card">
+                        <div class="card-heading p-4">
+                            <div class="mini-stat-icon float-right">
+                                <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-16">Barch kitoblar </h5>
+                            </div>
+                            <h3 class="mt-4">
+                                <%=bookslength %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- end row -->
+
+            <!-- START ROW -->
+            <!-- <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+
+                                <h4 class="mt-0 header-title mb-4">Adminlar royhati</h4> <a href="/add/admin">
+                                    <button type="button" class="btn btn-primary waves-effect waves-light mr-5"
+                                        data-toggle="modal" data-target=".bs-example-modal-lg">
+                                        admin qo'shish
+                                    </button>
+                                </a>
+                                <div class="table-responsive">
+
+                                    <table class="table table-hover">
+                                        <thead>
+                                    x        <tr>
+                                                <th scope="col">Login</th>
+                                                <th scope="col">Status</th>
+
+                                                <th scope="col">Status</th>
+                                                <th scope="col" colspan="2">param</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+            <!-- END ROW -->
+            <h1>Barcha Categoryladi Kitoblar</h1>
+            <div class="each-box-wrapper">
+                <%catdb.map(item=>{%>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="card">
+                            <div class="card-heading p-4">
+                                <div class="mini-stat-icon float-right">
+                                    <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-16">
+                                        <%=item.category[0].name %> Kitoblar
+                                    </h5>
+                                </div>
+
+                                <h3 class="mt-4">
+                                    <%=item.count %>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <%})%>
+            </div>
+            <h1>Jami Kitoblar soni</h1>
+            
+
+
+        </div>
+
+
+        <!-- container-fluid -->
+
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+        © 2019 - 2020 Stexo <span class="d-none d-sm-inline-block"> - Crafted with <i
+                class="mdi mdi-heart text-danger"></i> by Themesdesign</span>.
+    </footer>
+
+</div>

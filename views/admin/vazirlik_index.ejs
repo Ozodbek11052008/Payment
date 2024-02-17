@@ -1,0 +1,79 @@
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- end page-title -->
+            <div class="row">
+                <div class="mt-4" style="
+              display: flex;
+              width: 100%;
+              flex-direction: row;
+              justify-content:space-between;
+              align-items: center;
+            ">
+                    <h4 class="ml-5" style="font-weight: 600">
+                        Vazirlar Malumotlari
+                    </h4>
+                
+                </div>
+                <div class="col-12 table-responsive">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <p class="sub-title ml-3">
+                                Malumotlar malumotlar bazasidan to'gridan to'g'ri
+                                kelmoqda.Malumotlar oxirgi qo'shilgan tartibi bo'yicha chiqmoqda
+                            </p>
+
+                            <table id="datatable-buttons"
+                                class="table table-striped table-bordered dt-responsive nowrap" style="
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                  ">
+                                <thead>
+                                    <tr>
+                                        <th>Institut Nomi</th>
+                                        <th>Talabalar Soni</th>
+                                    
+
+                                       
+                                    
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <%userdb.map(item=>{%>
+                                        <tr>
+                                            
+                                           
+                                            <td>
+                                              <%=item.instituts.map((x) =>(x.name))  %>
+                                            </td>
+                                       <td>
+                                                <%=item.count%>
+                                            </td>
+                                              
+                                                
+                                        </tr>
+                                        <%})%>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- container-fluid -->
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+        © 2019 - 2020 Stexo
+        <span class="d-none d-sm-inline-block">
+            - Crafted with <i class="mdi mdi-heart text-danger"></i> by
+            Themesdesign</span>.
+    </footer>
+</div>

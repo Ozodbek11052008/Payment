@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Socket.IO chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+
+<body>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    img {
+      display: none;
+    }
+  </style> <video width="320" height="240" controls src="/a.mp4" style="display: none;">
+
+  </video>
+  <div class="container">
+
+    <div class="gif">
+
+      <img src="/0131235dd0bfaba8012129e272361e.jpg" alt="cat picture">
+
+    </div>
+  </div>
+</body>
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let video = document.querySelector("video");
+    let img = document.querySelector("img")
+
+    const socket = io();
+
+    const gif = document.querySelector("img")
+    socket.on("paymentSuccess", function () {
+      //  h1.style.color = '#555'
+      // video.style.display = 'block';
+      console.log('donaaat keldi');
+
+
+      // gif.style.display = 'block';
+      setTimeout(() => {
+        video.style.display = 'none'
+
+      }, 10000);
+    });
+  });
+</script>
+
+</html>
