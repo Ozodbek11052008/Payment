@@ -1,3 +1,4 @@
+const { payPageIp } = require("../Controller/Front End/frontEndController");
 const { createPayment, payPage } = require("../Controller/Streamer/paymentController")
 const express = require('express')
 const router = require("express").Router()
@@ -16,5 +17,7 @@ const io = require("socket.io")(http);
 //   });
 
 router.get("/donate/:id", payPage)
+router.get("/test/ip", payPageIp)
+
 router.post('/donate/:id',  createPayment)
 module.exports = router

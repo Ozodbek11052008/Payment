@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <button>send</button>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let button = document.querySelector('button')
+        async function Post(body) {
+            const data = await axios.post('/https://api.click.uz/v2/merchant/card_token/request', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Auth': '38597:a3c0b0893df9b87f775a74ce03b51040e4f47149:1711740955'
+                },
+                body: JSON.stringify(body) 
+                    
+
+            }
+
+         
+            )
+   const  result = await data;
+   console.log(result)
+        }
+        Post({
+            service_id: 31807,
+                    card_number: 9860160138011723,
+                    expire_date: "0728",
+                    temporary: 1
+                
+        })
+    </script>
+</body>
+
+</html>
