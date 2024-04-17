@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         let button = document.querySelector('button')
+
         async function Post(body) {
             const data = await axios.post('/https://api.click.uz/v2/merchant/card_token/request', JSON.stringify(body), {
                 headers: {
@@ -20,22 +21,25 @@
                     'Accept': 'application/json',
                     'Auth': '38597:a3c0b0893df9b87f775a74ce03b51040e4f47149:1711740955'
                 },
-             
-                    
+
+
 
             }
 
-         
+
             )
-   const  result = await data;
-   console.log(result)
+            const result = await data;
+            console.log(result)
         }
-        Post({
-            service_id: 31807,
-                    card_number: 9860160138011723,
-                    expire_date: "0728",
-                    temporary: 1
-                
+
+        button.addEventListener('click', () => {
+            Post({
+                service_id: 31807,
+                card_number: 9860160138011723,
+                expire_date: "0728",
+                temporary: 1
+
+            })
         })
     </script>
 </body>
