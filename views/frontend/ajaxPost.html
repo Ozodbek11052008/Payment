@@ -14,13 +14,13 @@
     <script>
         let button = document.querySelector('button')
         async function Post(body) {
-            const data = await axios.post('/https://api.click.uz/v2/merchant/card_token/request', {
+            const data = await axios.post('/https://api.click.uz/v2/merchant/card_token/request', JSON.stringify(body), {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
                     'Auth': '38597:a3c0b0893df9b87f775a74ce03b51040e4f47149:1711740955'
                 },
-                body: JSON.stringify(body) 
+             
                     
 
             }
