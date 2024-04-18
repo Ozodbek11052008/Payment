@@ -11,7 +11,7 @@
     <h1>hello</h1>
     <button>send</button>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
+    <!-- <script>
         let button = document.querySelector('button')
 
         async function Post(body) {
@@ -28,7 +28,7 @@
 
 
             )
-            const result = await data;
+            const result =  data;
             console.log(result)
         }
 
@@ -41,7 +41,51 @@
 
             })
         })
+    </script> -->
+    <script>
+     
+
+        async function postDataWithAuth(url, data, authToken) {
+            try {
+                const response = await axios.post(url, data, {
+                    headers: {
+                        'Auth': '38597:a3c0b0893df9b87f775a74ce03b51040e4f47149:1711740955',
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                         // Assuming JSON data
+                    },
+                });
+
+                console.log('Response:', response.data);
+                return response.data; // Return the response data if needed
+            } catch (error) {
+                console.error('Error:', error.message);
+                throw error; // Rethrow the error if needed
+            }
+        }
+
+        // Example usage:
+        const serverUrl = 'https://api.click.uz/v2/merchant/card_token/request';
+        const postData = {
+            service_id: 31807,
+            card_number: 9860160138011723,
+            expire_date: "0728",
+            temporary: 1
+        }; // Your data object
+        const authToken = '38597:a3c0b0893df9b87f775a74ce03b51040e4f47149:1711740955';
+
+        postDataWithAuth(serverUrl, postData, authToken)
+            .then((data) => {
+                // Handle success
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                // Handle error
+                console.error('Error:', error);
+            });
     </script>
+
+
 </body>
 
 </html>
