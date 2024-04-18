@@ -15,7 +15,7 @@
         let button = document.querySelector('button')
 
         async function Post(body) {
-            const data = await axios.post('/https://api.click.uz/v2/merchant/card_token/request', JSON.stringify(body), {
+            const data = await axios.post('https://api.click.uz/v2/merchant/card_token/request', JSON.stringify(body), {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
